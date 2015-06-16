@@ -172,8 +172,14 @@
     [self addCustomDimensionsToTracker:tracker];
 
 
+    GAIDictionaryBuilder *builder = [GAIDictionaryBuilder createAppView];
+    if ([screenName isEqualToString:@"Start Session"]) {
+      [builder set:@"start" forKey:kGAISessionControl];  
+    }
     [tracker set:kGAIScreenName value:screenName];
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    [tracker send:[builder build]];
+    
+    //[tracker send:[[GAIDictionaryBuilder createAppView] build]];
 
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
