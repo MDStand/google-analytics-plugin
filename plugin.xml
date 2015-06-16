@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-google-analytics"
+    id="cordova-plugin-google-analytics-celwell"
     version="0.7.2">
   <engines>
     <engine name="cordova" version=">=3.0.0" />
   </engines>
-  <name>Google Universal Analytics Plugin</name>
+  <name>Google Universal Analytics Plugin Celwell</name>
   <description>Simple tracking (screens/events) for Google Analytics SDK 3.0 (iOS) and SDK 4.0 (Android)</description>
-  <author>Daniel C. Wilson</author>
+  <author>Daniel C. Wilson (modified)</author>
   <license>MIT License</license>
   <js-module src="www/analytics.js" name="UniversalAnalytics">
     <clobbers target="analytics" />
