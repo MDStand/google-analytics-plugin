@@ -175,9 +175,9 @@
     GAIDictionaryBuilder *builder = [GAIDictionaryBuilder createAppView];
     if ([screenName isEqualToString:@"Start Session"]) {
       [builder set:@"start" forKey:kGAISessionControl];
-      pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Good error"];
-      [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-      return;
+    }
+    if ([screenName isEqualToString:@"End Session"]) {
+      [builder set:@"end" forKey:kGAISessionControl];
     }
     [tracker set:kGAIScreenName value:screenName];
     [tracker send:[builder build]];
